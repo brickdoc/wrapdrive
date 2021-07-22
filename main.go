@@ -23,7 +23,7 @@ func main() {
 
 	notFoundHandler := func(ctx *fasthttp.RequestCtx) {
 		ctx.SetContentType(API_CONTENT_TYPE)
-		ctx.SetBodyString("{\"error\": \"Resource Not found\", \"handler\":\"WrapDrive Static Server (Brickdoc App Engine)\"}")
+		ctx.SetBodyString("{\"error\": \"Resource Not found\", \"handler\":\"Brickdoc App Engine\"}")
 		ctx.SetStatusCode(fasthttp.StatusNotFound)
 	}
 

@@ -1,6 +1,6 @@
 # WrapDrive
 
-[![Docker Image Build](https://github.com/0xDing/wrapDrive/actions/workflows/build_image.yaml/badge.svg)](https://github.com/0xDing/wrapDrive/actions/workflows/build_image.yaml)
+[![Docker Image Build](https://github.com/brickdoc/wrapDrive/actions/workflows/build_image.yaml/badge.svg)](https://github.com/brickdoc/wrapDrive/actions/workflows/build_image.yaml)
 Tiny Http static file server.
 
 ## Devolopment
