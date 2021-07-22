@@ -1,5 +1,6 @@
 # WrapDrive
 
+[![Docker Image Build](https://github.com/0xDing/wrapDrive/actions/workflows/build_image.yaml/badge.svg)](https://github.com/0xDing/wrapDrive/actions/workflows/build_image.yaml)
 Tiny Http static file server.
 
 ## Devolopment
@@ -13,13 +14,15 @@ make build
 
 ```Dockerfile
 # build static website
-FROM node:16
-COPY . .
+FROM node:16  as build
+WORKDIR /app
+ADD . /app
 RUn yarn install && yarn build
 
 # copy it into wrapdrive container
 FROM ghcr.io/brickdoc/wrapdrive:latest
-COPY --from=build /dist /var/www
+COPY --from=build /app/dist /var/www
+CMD ["/wrapdrive"]
 ```
 
 ## License
